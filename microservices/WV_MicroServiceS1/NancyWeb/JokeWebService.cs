@@ -24,7 +24,7 @@ namespace NancyWeb
 
     public JokeWebService()
         {
-            Get["/"] = parameters => "This is the Jokes Service";
+            Get["/"] = parameters => "This is the Jokes Service, using a HTTP handler";
 
             //Get["/jokes"] = parameter => new JsonResponse(jokes, new DefaultJsonSerializer());
             Get["/jokes"] = parameter => Response.AsJson(jokes);
