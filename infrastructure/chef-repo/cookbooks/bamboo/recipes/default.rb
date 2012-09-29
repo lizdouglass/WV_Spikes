@@ -6,7 +6,7 @@ directory "#{node[:bamboo][:root]}" do
 end
 
 windows_zipfile "#{node[:bamboo][:root]}" do
-  source "C:/Software/atlassian-bamboo-4.2.1.zip"
+  source "http://www.atlassian.com/software/bamboo/downloads/binary/atlassian-bamboo-4.2.1.zip"
   action :unzip
   not_if {::File.exists?("#{node[:bamboo][:home]}/BambooConsole.bat")}
 end
