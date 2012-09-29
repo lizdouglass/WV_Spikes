@@ -35,8 +35,6 @@ action :unzip do
       if @new_resource.overwrite && ::File.exists?(path) && !::File.directory?(path)
         FileUtils.rm(path)
       end
-
-      puts ">>>>>>>>>>>> ENTRY: #{entry}, PATH: #{path}"
       zip.extract(entry, path)
     end
   end
