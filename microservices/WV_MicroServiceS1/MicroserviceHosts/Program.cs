@@ -13,27 +13,28 @@ namespace MicroserviceHosts
     public class Host
     {
         //Remember to add  the backslash
-        private static readonly Uri BaseUri = new Uri("http://localhost:8000/");
+        //private static readonly Uri BaseUri = new Uri("http://localhost:8000/");
 
         static void Main()
         {
-            using (CreateAndOpenWebServiceHost())
-            {
-                Console.WriteLine("Service is now running on: {0}", BaseUri);
-                Console.ReadLine();
-            }
+            //using (CreateAndOpenWebServiceHost())
+            //{
+            //    Console.WriteLine("Service is now running on: {0}", BaseUri);
+            //    Console.ReadLine();
+            //}
         }
 
         private static WebServiceHost CreateAndOpenWebServiceHost()
         {
-            var host = new WebServiceHost(
-                new NancyWcfGenericService(new DefaultNancyBootstrapper()),
-                BaseUri);
+            //var host = new WebServiceHost(
+            //    new NancyWcfGenericService(new DefaultNancyBootstrapper()),
+            //    BaseUri);
 
-            host.AddServiceEndpoint(typeof(NancyWcfGenericService), new WebHttpBinding(), "");
-            host.Open();
+            //host.AddServiceEndpoint(typeof(NancyWcfGenericService), new WebHttpBinding(), "");
+            //host.Open();
 
-            return host;
+            //return host;
+            return null;
         }
     }
 }

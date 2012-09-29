@@ -42,6 +42,14 @@
     <Reference Include="Nancy">
       <HintPath>..\packages\Nancy.0.12.1\lib\net40\Nancy.dll</HintPath>
     </Reference>
+    <Reference Include="Nancy.Hosting.Aspnet">
+      <HintPath>..\packages\Nancy.Hosting.Aspnet.0.12.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Wcf">
+      <HintPath>..\packages\Nancy.Hosting.Wcf.0.12.1\lib\net40\Nancy.Hosting.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -61,6 +69,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+    <None Include="Web.config.old" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JokeWebService.cs" />
@@ -69,11 +84,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <None Include="Web.config.Debug.old">
+      <DependentUpon>Web.config.old</DependentUpon>
     </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <None Include="Web.config.Release.old">
+      <DependentUpon>Web.config.old</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>
