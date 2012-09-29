@@ -1,3 +1,7 @@
+chef-solo -c nodes\chef-solo.rb -j nodes\node_name.json
+
+----- GENERATED DOC BELOW -----
+
 Overview
 ========
 
